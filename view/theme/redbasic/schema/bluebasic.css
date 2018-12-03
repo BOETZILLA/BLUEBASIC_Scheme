@@ -24,7 +24,7 @@ a:hover,
 a:focus,
 .fakelink:hover,
 .fakelink:focus {
-  color: $nav_bg !important;
+  color: #000 !important;
 }
 
 
@@ -43,13 +43,13 @@ a:focus,
 }
 
 .shared_header img {
-    border-radius: 0.25rem;
+    border-radius: 0.rem;
     margin: 0px 10px 10px 0px !important;
 
 }
 
 .shared_container {
-    border: 1px solid lightblue;
+    border: 0px solid lightblue;
     margin: 15px 0px;
     padding: 10px;
     float: left;
@@ -58,7 +58,7 @@ a:focus,
 
 .shared_header {
     margin-bottom: 20px;
-    border-bottom: 1px solid lightblue;
+    border-bottom: 0px solid lightblue;
     padding-bottom: 20px;
 }
 
@@ -118,7 +118,7 @@ a .drop-icons:hover {
 	border-top-left-radius: $radius;
 }
 .wall-item-head-new {
-    border-top: 0.1rem solid #007bff;
+    border-top: 0.0rem solid #007bff;
 }
 
 .wall-item-footer {
@@ -137,6 +137,7 @@ a .drop-icons:hover {
 	border-top-right-radius: 0px;
 	border-top-left-radius: 0px;
 }
+
 
 .p-2  {
     padding: 0.9rem !important;
@@ -172,53 +173,61 @@ a .drop-icons:hover {
     max-width: 100%;
     float: left;
     clear: both;
-    margin: 10px 15px 10px 0px;
+    margin: 10px 15px 15px 0px;
+}
+
+.wall-item-content blockquote img {
+    margin: 0px 15px 15px 0px !important;
 }
 
 .comment .wall-item-body {
     padding-left: 00px !important;
 }
 
-.wall-item-body a {padding-left: 2px; }
-
-
 .comment-edit-text {
-	border: 1px solid #ccc;
+	border: 0px solid #ccc;
 	border-radius: $radius;
 }
 
 .divgrow-showmore {
     display: block;
-    border: 1px dashed #ccc;
+    border-left: 0px solid lightgrey;
+    border-right: 0px solid lightgrey;
+    border-top: 0px solid #ccc;
+    border-bottom: 0px solid lightgrey;
     text-align: center;
-    padding: 7px;
-    margin: 13px 13px 0px 13px;
-    background: rgb(238,238,238);
-
-    border-radius: 3px;
+    padding: 10px;
+    margin: -13px 13px 13px 12px;
+    background: #f6f6f6;
+    border-radius: 0px;
+    position: relative;
 }
 
-.divgrow-showmore:hover {
-	border-top: 1px dashed #adadad;
+
+a .divgrow-showmore .fakelink, a .divgrow-showmore .fakelink:hover {
+	border-top: 0px solid #ccc !important;
 }
+
+
 
 .directory-item .divgrow-showmore {
 	background-color: $comment_item_colour;
+        margin: 0px;
 }
 
 /* widgets */
 
 .widget {
-    background-color: rgba(254,254,254,.5);
-    border: 1px solid rgba(254,254,254,.5);
-    border-radius: 2px;
+    background-color: rgba(254,254,254,.9);
+    border: 1px solid rgba(254,254,254,.9);
+    border-radius: 0px;
     margin-bottom: 1rem;
     padding: 0 0 0.7rem;
 }
 
 .widget h3 {
     margin-top: 0px;
-    border-bottom: 1px solid lightblue !important;
+    border-bottom: 0px solid lightgrey !important;
     padding: 15px;
     background-color: $nav_bg !important;
     color: #fff;
@@ -277,7 +286,7 @@ a .drop-icons:hover {
 }
 
 .generic-content-wrapper {
-	border: 1px solid rgba(0, 0, 0, .2);
+	border: 0px solid rgba(0, 0, 0, .2);
 	border-radius: $radius;
 	margin-bottom: 1.5rem;
         box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
@@ -305,6 +314,15 @@ a .drop-icons:hover {
 
 .section-title-wrapper img {width: 2.3rem; height; 2.3rem;}
 
+.section-title-wrapper {
+    color: $font_colour !important;
+    background: #fff;
+}
+
+.section-title-wrapper a {
+        color: $nav_colour !important;
+}
+
 #inline-btn {
 	display: none;
 }
@@ -319,19 +337,32 @@ a .drop-icons:hover {
 }
 
 .rounded-top {
-	border-top-left-radius: $radius !important;
-	border-top-right-radius: $radius !important;
+	border-top-left-radius: 0px !important;
+	border-top-right-radius: 0px !important;
 }
 
 
 Element {
 }
-blockquote {
+.wall-item-content blockquote img {
+    margin: 0px 15px 15px 0px !important;
+}
+
+blockquote, .shared_container {
+
     font-size: 1rem;
-    font-style: italic;
-    border: 1px dotted #ccc;
-    padding: 1em 1.5em;
-    margin: 10px 0px;
+    font-style: normal;
+    border: 0px solid lightgrey;
+    padding: 1em;
+    margin: 1em 0 0;
+}
+
+blockquote {
+    background: rgba(168,168,168,.1);    
+}
+
+.shared_container {
+    background: rgba(168,168,168,.1);    
 }
 
 .dropdown-menu {
@@ -361,8 +392,12 @@ blockquote {
 }
 
 .bg-dark, #menu_logo {
-	background-color: $nav_bg !important;
         z-index: 1;
+}
+
+.bg-dark, #menu_logo, .widget h3, .bg-primary , .wall-item-title, .wall-item-title.h3 a {
+    background-color: $nav_bg !important;
+    color: #fff !important;
 }
 
 #menu_logo {
@@ -383,7 +418,7 @@ blockquote {
     margin-right:20px;
     color:$banner_colour;
     font-weight:800;
-    border-bottom:1px #4267b2;
+    border-bottom:0px #4267b2;
 }
 
 #menu_logo .fa.fa-hubzilla  {
@@ -429,7 +464,7 @@ blockquote {
 @media screen and (max-width: 992px) {
 
 	aside#region_1 {
-		border-right: 1px solid $nav_bd;
+		border-right: 0px solid $nav_bd;
 	}
 
 	main {
@@ -518,7 +553,7 @@ img.zrl {
     white-space: nowrap !important;
     vertical-align: baseline !important;
     border-radius: 0 !important;
-    font-size: 0.75rem !important;
+    font-size: 0.9rem !important;
 
 }
 
@@ -535,29 +570,105 @@ img[src*="feedburner"] {
     padding-top: 56.25% !important;
 }
 
-iframe {
-    width: 100%;
-    position: relative;
-    height: 100%;
+img[src*="feedburner"] {
 
+    visibility: hidden;
+    display: none;
 }
 
+
+
+.oembed.video {
+    padding-top: 56.25% !important;
+}
+
+iframe {
+    width: 100%;
+ 
+    height: 100%;
+}
+
+.oembed.rich {
+     position: relative;
+     width: 100%;
+     height: 0;
+     padding-bottom: 56.25%;
+}
 
 .oembed.video a {
     width: 100% !important;
-    margin: 0 !important;
-    height: 500px;
+    height: 480px;
+    margin: 0em 0em 2em 0em !important;
 }
+
 
 .oembed.video iframe, .oembed.video html, .oembed.video body, .oembed.video img {
     width: 100% !important;
-    height: 500px;
+    height: 490px;
     position: relative;
-    margin-top: 10px;
     padding-top: 0px;
-    padding-bottom: 0px;
+    margin: 1em 0em 1em 0em !important;
+    background-color: #000;
 }
 
 audio {
     width: 100%;
+}
+
+.section-title-wrapper {
+    color: $font_colour !important;
+    background: #fff;
+}
+
+.section-title-wrapper a {
+        color: $nav_colour !important;
+}
+
+.badge {
+    display: inline-block;
+    padding: .25em .4em;
+        padding-right: 0.4em;
+        padding-left: 0.4em;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    vertical-align: baseline !important;
+    border-radius: 0 !important;
+    font-size: 0.9rem !important;
+
+}
+
+.hz_cover_photo img {
+    width: auto;
+    /* max-width: 100%; */
+    height: 315px;
+}
+
+.hz_profile_photo img {
+    position: relative;
+    top: -5px;
+    left: 0px;
+    border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    padding: 1px !important;
+    width: 150px;
+    height: 150px;
+}
+
+.hz_name, .hz_addr {
+    text-shadow: 2px 1px 1px rgba(0, 0, 0, 1) !important;
+    font-weight: bold !important;
+}
+
+.hz_name {
+    top: -95px !important;
+    left: 210px !important;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+
+.hz_card, .hz_small img {
+    margin: 0px 15px 0px 0px !important;
 }
