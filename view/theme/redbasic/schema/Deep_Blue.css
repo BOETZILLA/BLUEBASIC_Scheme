@@ -46,12 +46,12 @@ a:focus,
 
 .shared_header img {
     border-radius: 0.rem;
-    margin: 0px 10px 10px 0px !important;
-
+    margin: -5px 10px 0px -5px !important;
 }
 
 .shared_container {
-    border: 0px solid lightblue;
+    border: 1px solid !important;
+    border-color: rgba(66,103,168,.1) !important;
     margin: 15px 0px;
     padding: 10px;
     float: left;
@@ -59,9 +59,10 @@ a:focus,
 }
 
 .shared_header {
-    margin-bottom: 20px;
+    margin: -15px -15px 15px -15px;
     border-bottom: 0px solid lightblue;
-    padding-bottom: 20px;
+    padding: 15px 15px 15px 20px;
+    background: rgba(66,103,168,.2);
 }
 
 .generic-icons,
@@ -140,7 +141,6 @@ a .drop-icons:hover {
 	border-top-left-radius: 0px;
 }
 
-
 .p-2  {
     padding: 0.9rem !important;
 }
@@ -172,7 +172,7 @@ a .drop-icons:hover {
 }
 
 .wall-item-content img {
-    max-width: 100%;
+    max-width: 100% !important;
     float: left;
     clear: both;
     margin: 10px 15px 15px 0px;
@@ -180,6 +180,10 @@ a .drop-icons:hover {
 
 .wall-item-content blockquote img {
     margin: 0px 15px 15px 0px !important;
+}
+
+.wall-item-content img.smiley {
+    float: none;
 }
 
 .comment .wall-item-body {
@@ -199,29 +203,31 @@ a .drop-icons:hover {
     border-bottom: 0px solid lightgrey;
     text-align: center;
     padding: 10px;
-    margin: -13px 13px 13px 12px;
-    background: #f6f6f6;
+    margin: 0px 13px 0px 12px;
     border-radius: 0px;
     position: relative;
+    background: #f2f2f2;
 }
-
 
 a .divgrow-showmore .fakelink, a .divgrow-showmore .fakelink:hover {
 	border-top: 0px solid #ccc !important;
 }
-
-
 
 .directory-item .divgrow-showmore {
 	background-color: $comment_item_colour;
         margin: 0px;
 }
 
+.btn-group, .btn-group-vertical {
+    margin-right: 0px;
+}
+
+
 /* widgets */
 
 .widget {
     background-color: rgba(254,254,254,.9);
-    border: 1px solid rgba(254,254,254,.9);
+    border: 0px solid rgba(254,254,254,.9);
     border-radius: 0px;
     margin-bottom: 1rem;
     padding: 0 0 0.7rem;
@@ -236,7 +242,11 @@ a .divgrow-showmore .fakelink, a .divgrow-showmore .fakelink:hover {
     font-size: 1.2rem;
 }
 
-
+.title, .location, .mf, .marital, .homepage {
+    padding: 5px 15px 0;
+    width: 100%;
+    margin-bottom: 0em;
+}
 
 .menu-img-3 {
 	width: 3.3em;
@@ -346,25 +356,21 @@ a .divgrow-showmore .fakelink, a .divgrow-showmore .fakelink:hover {
 
 Element {
 }
+
 .wall-item-content blockquote img {
     margin: 0px 15px 15px 0px !important;
 }
 
 blockquote, .shared_container {
-
     font-size: 1rem;
     font-style: normal;
     border: 0px solid lightgrey;
     padding: 1em;
-    margin: 1em 0 0;
+    margin: 1em 0 1em 0;
 }
 
-blockquote {
-    background: rgba(168,168,168,.1);    
-}
-
-.shared_container {
-    background: rgba(168,168,168,.1);    
+blockquote, .shared_container {
+    background: rgba(168,168,168,.15);    
 }
 
 .dropdown-menu {
@@ -410,7 +416,6 @@ blockquote {
     float: left;
     margin-bottom: 0px;
     color: $banner_colour;
-
 }
 
 #hubzilla {
@@ -487,7 +492,6 @@ blockquote {
 		font-size: 1rem;
 		margin-right: 0.5rem;
 	}
-
 }
 
 /* Modified original CSS to match input in Redbasic */
@@ -556,29 +560,32 @@ img.zrl {
     vertical-align: baseline !important;
     border-radius: 0 !important;
     font-size: 0.9rem !important;
-
 }
 
 .contact-photo-wrapper img {width: 80px; height: 80px;}
 
-img[src*="feedburner"] {
-
-    visibility: hidden;
-    display: none;
+.contact-block-img {
+    width: 47px;
+    height: 47px;
+    margin: 0.2em;
 }
-
  
 .oembed.video {
     padding-top: 56.25% !important;
 }
 
 img[src*="feedburner"] {
-
     visibility: hidden;
     display: none;
 }
 
+img[src*="faz.net"] {
+    max-width: 33% !important;
+}
 
+blockquote img[src*="faz.net"] {
+    max-width: 100% !important;
+}
 
 .oembed.video {
     padding-top: 56.25% !important;
@@ -586,7 +593,6 @@ img[src*="feedburner"] {
 
 iframe {
     width: 100%;
- 
     height: 100%;
 }
 
@@ -602,7 +608,6 @@ iframe {
     height: 480px;
     margin: 0em 0em 2em 0em !important;
 }
-
 
 .oembed.video iframe, .oembed.video html, .oembed.video body, .oembed.video img {
     width: 100% !important;
@@ -674,3 +679,29 @@ audio {
 .hz_card, .hz_small img {
     margin: 0px 15px 0px 0px !important;
 }
+
+.bblock.widget img {
+    margin: -8px 0 -9px 0;
+    width: 100%;
+}
+
+#region_2 .bblock.widget {
+	background: none !important;
+}
+
+#region_2 .bblock.widget img {
+    margin: -0px 0 -4px 0;
+    width: 100%;
+}
+
+#notifications_wrapper { 
+    margin: 0 0 -1em 0; 
+}
+
+.collapse:not(.show) { 
+    margin: 0 0 1em 0; 
+}
+
+.modal-sm {
+    max-width: 100% !important;
+  }
