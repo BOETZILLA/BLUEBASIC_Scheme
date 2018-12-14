@@ -11,7 +11,7 @@
 main {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1366px;
+    max-width: 1280px;
     margin-top: 15px;
 }
 
@@ -169,6 +169,10 @@ a .drop-icons:hover {
 .comment .wall-item-photo {
 	width: $reply_photo;
 	height: $reply_photo;
+}
+
+.wall-item-content {
+    margin-top: -0.9rem;
 }
 
 .wall-item-content img {
@@ -519,7 +523,7 @@ blockquote, .shared_container {
 }
 
 img.zrl {
-    width: 100% !important;
+
     height: auto;
     float: initial;
 }
@@ -591,9 +595,18 @@ blockquote img[src*="faz.net"] {
     padding-top: 56.25% !important;
 }
 
+.widget iframe {
+    width: 100%;
+    height: 100%;
+    min-width: 0px;
+    min-height: 0px;
+}
+
 iframe {
     width: 100%;
     height: 100%;
+    min-width: 640px;
+    min-height: 480px;
 }
 
 .oembed.rich {
